@@ -2,6 +2,7 @@ package guru.springframework.services;
 
 import guru.springframework.domain.Recipe;
 import guru.springframework.repositories.RecipeRepository;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,8 @@ public class RecipeServiceImpl implements RecipeService{
 
     @Override
     public ArrayList<Recipe> getRecipes() {
-        log.debug("In the service layer");
+        log.debug("In the service layer" +
+                "");
         return (ArrayList<Recipe>) this.recipeRepository.findAll();
     }
 }
