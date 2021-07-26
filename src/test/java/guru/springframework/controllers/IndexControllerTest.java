@@ -44,6 +44,7 @@ class IndexControllerTest {
                 .andExpect(view().name("index"));
     }
 
+
     @Test
     void getIndexPage() {
         String viewName = indexController.getIndexPage(model);
